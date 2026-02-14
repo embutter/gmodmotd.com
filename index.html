@@ -27,7 +27,7 @@
         /* 배경 이미지가 들어가는 헤더 */
         .header {
             position: relative;
-            padding: 70px 30px;
+            padding: 60px 30px;
             text-align: center;
             background-image: url('https://www.dropbox.com/scl/fi/z5edm46mpj6llcrxt9se9/Gemini_Generated_Image_7epauc7epauc7epa.png?rlkey=kv2e929tsuoa6ux5mwzi3lrqd&st=9ah9gwhl&dl=1');
             background-size: cover;
@@ -35,12 +35,11 @@
             color: #ffffff;
         }
 
-        /* 글자 가독성을 위한 반투명 덮개 */
         .header::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
 
@@ -51,53 +50,75 @@
         }
 
         .header h1 {
-            font-size: 3em;
+            font-size: 2.8em;
             font-weight: 800;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
         }
 
         .header p {
-            font-size: 1.3em;
+            font-size: 1.2em;
             margin-top: 10px;
             opacity: 0.9;
         }
 
         .content {
-            padding: 40px;
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px; /* 섹션 간 간격을 넉넉히 주어 아래로 정렬 */
         }
 
         .section h2 {
             color: #333;
-            border-left: 5px solid #8ab4f8; /* 버튼과 맞춘 연한 파랑 포인트 */
+            border-left: 5px solid #8ab4f8;
             padding-left: 15px;
             margin-bottom: 20px;
             font-size: 1.8em;
         }
 
-        li {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 1.2em;
-            color: #444;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        /* ✨ 요청하신 연한 파란색 버튼 스타일 */
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        li:before {
+            content: "• ";
+            color: #8ab4f8;
+            font-weight: bold;
+        }
+
+        /* 강조 텍스트 (기존 it 태그 대체용) */
+        .highlight {
+            color: #e74c3c; 
+            font-weight: bold;
+        }
+
         .btn {
             display: inline-block;
-            background-color: #8ab4f8; /* 연한 파랑 (Sky Blue계열) */
+            background-color: #8ab4f8;
             color: #ffffff;
             padding: 15px 40px;
             text-decoration: none;
-            border-radius: 30px; /* 둥근 버튼 형태 */
+            border-radius: 30px;
             font-weight: bold;
             font-size: 1.1em;
-            margin-top: 15px;
+            margin-top: 10px;
             transition: 0.2s ease;
             box-shadow: 0 4px 10px rgba(138, 180, 248, 0.3);
         }
 
         .btn:hover {
-            background-color: #6a9df5; /* 마우스 올렸을 때 약간 더 진하게 */
+            background-color: #6a9df5;
             transform: translateY(-2px);
         }
 
@@ -106,7 +127,7 @@
             padding: 20px;
             text-align: center;
             color: #bbb;
-            font-size: 0.95em;
+            font-size: 0.9em;
             border-top: 1px solid #eee;
         }
     </style>
@@ -116,51 +137,52 @@
 <div class="container">
     <div class="header">
         <h1>빅시티 자유공원</h1>
-        <p>환영합니다! 좋은 시간 보내세요!.</p>
+        <p>환영합니다! 좋은 시간 보내세요!</p>
     </div>
-
-                <h2>서버에 대하여</h2>
-            <ul>
-                <li>서버내에 ULX이 장착 되어 있습니다</li>
-                <li>!menu로 메뉴 열기 혹은 !time으로 시간 확인이 가능합니다</li>
-                <li>여기는 자유서버이며 마음것 자기 하고 싶은거를 하셔도 됩니다</li>
-                <li>창작마당 링크킄 아래에 있습니다</li>
-                <it>채팅창에 !report를 통해 신고가 가능합니다. 유저선택--> 사유</it>
-                <it>현재 서버 기기는 개인 pc이며 디도스 및 렉유발은 하지 말아주세요</it>
-            </ul>
-        </div>
 
     <div class="content">
         <div class="section">
-            <h2>📜 서버 규칙</h2>
+            <h2>🏠 서버에 대하여</h2>
             <ul>
-                <li>욕설은 가능하나 일베성 드립, 패드립은 하지 말아주세요</li>
-                <li>무분별한 프롭 소환 및 렉 유발은 하지 말아주세요</li>
-                <li>빌드중에 그 유저의 빌드를 허락하지 않는 이상 만지지 마세요</li>
-                <li>신고 시스템 악용을 금지합니다</li>
-                <it>무고신고 및 장난으로 적지마세요</it>
-                <it>엔티티에 있는 폭탄 함부로 사용하지 마세요</it>
+                <li>서버 내에 ULX가 장착되어 있습니다.</li>
+                <li>!menu로 메뉴 열기 혹은 !time으로 시간 확인이 가능합니다.</li>
+                <li>여기는 자유 서버이며 마음껏 하고 싶은 것을 하셔도 됩니다.</li>
+                <li>창작마당 링크는 아래에 있습니다.</li>
+                <li class="highlight">채팅창에 !report를 통해 신고가 가능합니다. (유저 선택 -> 사유)</li>
+                <li class="highlight">현재 서버 기기는 개인 PC이며 디도스 및 렉 유발은 하지 말아주세요.</li>
             </ul>
         </div>
 
-            <h2>도움을 주신 인물들</h2>
+        <div class="section">
+            <h2>📜 서버 규칙</h2>
             <ul>
-                <li>GALOK - 창작마당 모음집</li>
-                <li>다크브릭 - 연동봇, 애드온, 서버 구축</li>
-                <li>Jellen - 레그돌 스크립트</li>
-                <li>klonox - ULX , 애드온</li>
-                <it>DEAT - ULX, 애드온</it>
+                <li>욕설은 가능하나 일베성 드립, 패드립은 금지합니다.</li>
+                <li>무분별한 프롭 소환 및 렉 유발은 하지 말아주세요.</li>
+                <li>다른 유저의 빌드를 허락 없이 건드리지 마세요.</li>
+                <li>신고 시스템 악용을 금지합니다. (무고/장난 신고 금지)</li>
+                <li class="highlight">엔티티에 있는 폭탄을 함부로 사용하지 마세요.</li>
             </ul>
         </div>
-        
+
         <div class="section">
+            <h2>🤝 도움을 주신 분들</h2>
+            <ul>
+                <li><strong>GALOK</strong> - 창작마당 모음집</li>
+                <li><strong>다크브릭</strong> - 연동봇, 애드온, 서버 구축</li>
+                <li><strong>Jellen</strong> - 레그돌 스크립트</li>
+                <li><strong>klonox</strong> - ULX, 애드온</li>
+                <li><strong>DEAT</strong> - ULX, 애드온</li>
+            </ul>
+        </div>
+
+        <div class="section" style="text-align: center;">
             <h2>🔗 주요 링크</h2>
             <a href="https://steamcommunity.com" class="btn">창작마당 모음집</a>
         </div>
     </div>
 
     <div class="footer">
-        &copy; 2026 빅시티 시민공원. All Rights Reserved.
+        &copy; 2026 빅시티 자유공원. All Rights Reserved.
     </div>
 </div>
 

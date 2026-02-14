@@ -1,2 +1,123 @@
-# gmodmotd.com
-gmod server ULX motd
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Server MOTD</title>
+    <style>
+        /* 게리모드 인게임 폰트와 유사한 스타일 */
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: #2d2d2d;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4a90e2, #2c3e50);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section h2 {
+            color: #4a90e2;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #3d3d3d;
+        }
+
+        li:before {
+            content: "• ";
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>WELCOME TO OUR SERVER</h1>
+        <p>환영합니다! 매너 있는 플레이를 부탁드립니다.</p>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2>📜 서버 규칙</h2>
+            <ul>
+                <li>타인에게 불쾌감을 주는 욕설 및 비하 발언 금지</li>
+                <li>과도한 프랍 스팸 및 서버 렉 유발 행위 금지</li>
+                <li>어드민의 정당한 지시에 불응 시 제재될 수 있습니다</li>
+                <li>버그 악용 시 영구 차단 조치</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔗 주요 링크</h2>
+            <p>공지사항 확인 및 건의사항은 아래 버튼을 이용하세요.</p>
+            <a href="https://steamcommunity.com" class="btn">스팀 그룹 바로가기</a>
+            <a href="#" class="btn" style="background: #5865F2;">디스코드 참여</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Your Server Name. All Rights Reserved.
+    </div>
+</div>
+
+</body>
+</html>

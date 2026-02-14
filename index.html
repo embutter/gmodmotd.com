@@ -7,102 +7,78 @@
         body {
             background-color: #1a1a1a;
             color: #ffffff;
-            font-family: "Segoe UI", "Malgun Gothic", sans-serif; /* 한글 폰트 추가 */
+            font-family: "Malgun Gothic", sans-serif;
             margin: 0;
-            padding: 40px 20px; /* 상하 여백 증가 */
+            padding: 50px 20px;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* 위쪽부터 정렬 */
-            min-height: 100vh;
         }
 
         .container {
-            width: 95%; /* 너비 확장 */
-            max-width: 1000px; /* 최대 너비 확장 */
+            width: 95%; 
+            max-width: 1100px; /* 너비 대폭 확장 */
             background: #2d2d2d;
-            border-radius: 15px; /* 곡률 증가 */
-            box-shadow: 0 15px 50px rgba(0,0,0,0.7);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            border: 2px solid #444;
             overflow: hidden;
-            border: 1px solid #444;
         }
 
         .header {
             background: linear-gradient(135deg, #4a90e2, #2c3e50);
-            padding: 50px 30px; /* 헤더 높이 증가 */
+            padding: 60px 40px;
             text-align: center;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 3.5em; /* 제목 크게 */
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-            letter-spacing: -1px;
+            font-size: 4.5em; /* 제목 엄청 크게 */
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
         }
 
         .header p {
-            font-size: 1.4em; /* 부제목 크게 */
-            margin-top: 15px;
-            opacity: 0.9;
+            font-size: 1.8em; /* 부제목 크게 */
+            margin-top: 20px;
+            color: #e0e0e0;
         }
 
         .content {
-            padding: 40px; /* 내부 여백 증가 */
-        }
-
-        .section {
-            margin-bottom: 40px;
+            padding: 50px;
         }
 
         .section h2 {
             color: #4a90e2;
-            border-bottom: 3px solid #4a90e2; /* 선 두께 증가 */
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 2em; /* 섹션 제목 크게 */
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
+            border-bottom: 4px solid #4a90e2;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.5em; /* 섹션 제목 크게 */
         }
 
         li {
-            padding: 15px 0; /* 목록 간격 증가 */
-            border-bottom: 1px solid #3d3d3d;
-            font-size: 1.3em; /* 규칙 텍스트 크게 */
-            line-height: 1.6;
-        }
-
-        li:before {
-            content: "✔ "; /* 체크 표시로 변경 */
-            color: #4a90e2;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .footer {
-            background: #222;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.1em;
-            color: #888;
+            padding: 20px 0;
+            border-bottom: 1px solid #444;
+            font-size: 1.6em; /* 규칙 텍스트 아주 크게 */
+            line-height: 1.5;
         }
 
         .btn {
             display: inline-block;
             background: #4a90e2;
             color: white;
-            padding: 15px 35px; /* 버튼 크기 대폭 증가 */
+            padding: 25px 50px; /* 버튼 크기 킹사이즈 */
             text-decoration: none;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: 1.2em;
+            border-radius: 12px;
+            margin-top: 30px;
+            font-size: 1.5em;
             font-weight: bold;
-            transition: background 0.3s;
         }
 
-        .btn:hover {
-            background: #357abd;
+        .footer {
+            background: #222;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #777;
         }
     </style>
 </head>
@@ -118,30 +94,19 @@
         <div class="section">
             <h2>📜 서버 규칙</h2>
             <ul>
-                <li>타인에게 불쾌감을 주는 욕설 및 비하 발언 금지</li>
-                <li>과도한 프랍 스팸 및 서버 렉 유발 행위 금지</li>
-                <li>어드민의 정당한 지시에 불응 시 제재될 수 있습니다</li>
-                <li>버그 악용 시 영구 차단 조치</li>
+                <li>욕설 및 타인 비하 발언 즉시 차단</li>
+                <li>프랍 스팸 및 서버 렉 유발 절대 금지</li>
+                <li>어드민 지시 불응 시 서버 이용 제한</li>
+                <li>모든 버그 악용 행위 금지</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>🔗 주요 링크</h2>
-            <a href="https://steamcommunity.com" class="btn">창작마당 모음집 바로가기</a> 
+            <a href="https://steamcommunity.com" class="btn">창작마당 모음집 바로가기</a>
         </div>
     </div>
 
-        <div class="section">
-            <h2>도움을 주신 인물들</h2>
-            <ul>
-                <li>DEAT - ULX, 애드온</li>
-			    <li>GALOK - 창작마당 모음집</li>
-		  	    <li>Jellen - 레그돌 스크립트</li>
-			    <li>klonox - ULX , 애드온</li>
-			    <li>다크브릭 -  연동봇, 애드온, 서버 구축</li>
-        <ul>
-    </div>
-    
     <div class="footer">
         &copy; 2026 빅시티 시민공원. All Rights Reserved.
     </div>
@@ -149,6 +114,3 @@
 
 </body>
 </html>
-        .btn {
-            display: inline-block;
-            background: #4a90e2

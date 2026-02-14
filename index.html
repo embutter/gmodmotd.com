@@ -149,6 +149,7 @@
             margin-top: 30px;
         }
 
+        /* 버튼 스타일 유지 (기존 btn 클래스 적용) */
         .btn {
             display: inline-block;
             background-color: #8ab4f8;
@@ -161,6 +162,7 @@
             transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 6px 15px rgba(138, 180, 248, 0.4);
             cursor: pointer;
+            border: none; /* 버튼 태그 기본 테두리 제거 */
         }
 
         .btn:hover {
@@ -237,7 +239,9 @@
             <h2>🔗 커뮤니티 및 모음집</h2>
             <p style="color: #666; margin-bottom: 20px;">서버 접속 전, 아래 버튼을 눌러 모든 애드온을 구독해 주세요.</p>
             <div class="btn-group">
-                <a href="steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=3661460068" class="btn">창작마당 모음집 구독하기</a>
+                <button type="button" class="btn" onclick="window.location.href='steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=3661460068';">
+                    창작마당 모음집 구독하기
+                </button>
             </div>
         </div>
     </div>

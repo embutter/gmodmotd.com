@@ -24,7 +24,6 @@
             overflow: hidden;
         }
 
-        /* 헤더 섹션 */
         .header {
             position: relative;
             padding: 80px 40px;
@@ -67,7 +66,6 @@
             padding: 40px;
         }
 
-        /* 공통 섹션 스타일 */
         .section {
             margin-bottom: 50px;
             line-height: 1.6;
@@ -117,7 +115,6 @@
             font-weight: bold;
         }
 
-        /* 강조 텍스트 */
         .highlight {
             color: #d93025;
             font-weight: bold;
@@ -126,7 +123,6 @@
             padding-left: 10px !important;
         }
 
-        /* 정보 테이블 (사양 안내용) */
         .specs-table {
             width: 100%;
             border-collapse: collapse;
@@ -148,7 +144,6 @@
             background: #f1f3f5;
         }
 
-        /* 버튼 */
         .btn-group {
             text-align: center;
             margin-top: 30px;
@@ -165,6 +160,7 @@
             font-size: 1.2em;
             transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 6px 15px rgba(138, 180, 248, 0.4);
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -241,7 +237,12 @@
             <h2>🔗 커뮤니티 및 모음집</h2>
             <p style="color: #666; margin-bottom: 20px;">서버 접속 전, 아래 버튼을 눌러 모든 애드온을 구독해 주세요.</p>
             <div class="btn-group">
-                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3661460068" class="btn" target="_blank">창작마당 모음집 구독하기</a>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3661460068" 
+                   class="btn" 
+                   target="_blank" 
+                   onclick="window.open(this.href, '_blank'); return false;">
+                   창작마당 모음집 구독하기
+                </a>
             </div>
         </div>
     </div>

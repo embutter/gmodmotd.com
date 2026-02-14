@@ -2,32 +2,32 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Server MOTD</title>
+    <title>Server MOTD - 빅시티 자유공원</title>
     <style>
         body {
-            background-color: #f4f6f9;
+            background-color: #f0f2f5;
             color: #1a1a1a;
-            font-family: "Malgun Gothic", sans-serif;
+            font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
             margin: 0;
-            padding: 30px 10px;
+            padding: 50px 10px;
             display: flex;
             justify-content: center;
         }
 
         .container {
             width: 95%; 
-            max-width: 800px;
+            max-width: 900px;
             background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             border: 1px solid #e1e4e8;
             overflow: hidden;
         }
 
-        /* 배경 이미지가 들어가는 헤더 */
+        /* 헤더 섹션 */
         .header {
             position: relative;
-            padding: 60px 30px;
+            padding: 80px 40px;
             text-align: center;
             background-image: url('https://www.dropbox.com/scl/fi/z5edm46mpj6llcrxt9se9/Gemini_Generated_Image_7epauc7epauc7epa.png?rlkey=kv2e929tsuoa6ux5mwzi3lrqd&st=9ah9gwhl&dl=1');
             background-size: cover;
@@ -39,7 +39,7 @@
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.55);
             z-index: 1;
         }
 
@@ -50,31 +50,46 @@
         }
 
         .header h1 {
-            font-size: 2.8em;
-            font-weight: 800;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            font-size: 3.2em;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
         }
 
         .header p {
-            font-size: 1.2em;
-            margin-top: 10px;
+            font-size: 1.3em;
+            margin-top: 15px;
             opacity: 0.9;
+            font-weight: 300;
         }
 
         .content {
-            padding: 30px;
+            padding: 40px;
         }
 
+        /* 공통 섹션 스타일 */
         .section {
-            margin-bottom: 40px; /* 섹션 간 간격을 넉넉히 주어 아래로 정렬 */
+            margin-bottom: 50px;
+            line-height: 1.6;
         }
 
         .section h2 {
-            color: #333;
-            border-left: 5px solid #8ab4f8;
-            padding-left: 15px;
-            margin-bottom: 20px;
-            font-size: 1.8em;
+            color: #2c3e50;
+            border-left: 6px solid #8ab4f8;
+            padding-left: 18px;
+            margin-bottom: 25px;
+            font-size: 1.9em;
+            display: flex;
+            align-items: center;
+        }
+
+        .section h3 {
+            font-size: 1.3em;
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #eee;
         }
 
         ul {
@@ -84,50 +99,86 @@
         }
 
         li {
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 1.1em;
+            padding: 12px 15px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 1.05em;
             color: #444;
-            line-height: 1.5;
+            transition: background 0.2s;
+        }
+
+        li:hover {
+            background-color: #fcfcfc;
         }
 
         li:before {
-            content: "• ";
+            content: "✓";
+            margin-right: 10px;
             color: #8ab4f8;
             font-weight: bold;
         }
 
-        /* 강조 텍스트 (기존 it 태그 대체용) */
+        /* 강조 텍스트 */
         .highlight {
-            color: #e74c3c; 
+            color: #d93025;
             font-weight: bold;
+            background-color: #fff5f5;
+            border-left: 3px solid #d93025;
+            padding-left: 10px !important;
+        }
+
+        /* 정보 테이블 (사양 안내용) */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .specs-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-table td:first-child {
+            font-weight: bold;
+            width: 30%;
+            color: #666;
+            background: #f1f3f5;
+        }
+
+        /* 버튼 */
+        .btn-group {
+            text-align: center;
+            margin-top: 30px;
         }
 
         .btn {
             display: inline-block;
             background-color: #8ab4f8;
-            color: #ffffff;
-            padding: 15px 40px;
+            color: #ffffff !important;
+            padding: 18px 50px;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 50px;
             font-weight: bold;
-            font-size: 1.1em;
-            margin-top: 10px;
-            transition: 0.2s ease;
-            box-shadow: 0 4px 10px rgba(138, 180, 248, 0.3);
+            font-size: 1.2em;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 6px 15px rgba(138, 180, 248, 0.4);
         }
 
         .btn:hover {
-            background-color: #6a9df5;
-            transform: translateY(-2px);
+            background-color: #5a95f5;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(138, 180, 248, 0.5);
         }
 
         .footer {
-            background: #fafafa;
-            padding: 20px;
+            background: #f8f9fa;
+            padding: 30px;
             text-align: center;
-            color: #bbb;
-            font-size: 0.9em;
+            color: #888;
+            font-size: 0.95em;
             border-top: 1px solid #eee;
         }
     </style>
@@ -137,61 +188,70 @@
 <div class="container">
     <div class="header">
         <h1>빅시티 자유공원</h1>
-        <p>환영합니다! 좋은 시간 보내세요!</p>
+        <p>자유로운 상상력이 현실이 되는 공간</p>
     </div>
 
     <div class="content">
         <div class="section">
-            <h2>🏠 서버에 대하여</h2>
+            <h2>🏠 서버 안내 및 편의기능</h2>
             <ul>
-                <li>서버 내에 ULX가 장착되어 있습니다.</li>
-                <li>!menu로 메뉴 열기 혹은 !time으로 시간 확인이 가능합니다.</li>
-                <li>여기는 자유 서버이며 마음껏 하고 싶은 것을 하셔도 됩니다.</li>
-                <li>창작마당 링크는 아래에 있습니다.</li>
-                <li class="highlight">채팅창에 !report를 통해 신고가 가능합니다. (유저 선택 -> 사유)</li>
-                <li class="highlight">현재 서버 기기는 개인 PC이며 디도스 및 렉 유발은 하지 말아주세요.</li>
+                <li><strong>최적화 시스템:</strong> 서버 부하를 줄이기 위해 180초마다 데칼 자동 정리가 실행됩니다.</li>
+                <li><strong>편의 명령어:</strong> 채팅창에 <code>!menu</code>(ULX 메뉴), <code>!time</code>(플레이 시간)을 입력하세요.</li>
+                <li><strong>자유로운 환경:</strong> 본 서버는 샌드박스 기반 자유 서버로, 타인에게 피해를 주지 않는 선에서 모든 활동이 허용됩니다.</li>
+                <li class="highlight">신고가 필요할 땐 <code>!report</code>를 사용해 관리자에게 알림을 보낼 수 있습니다.</li>
+                <li>개인 PC 서버 특성상 과도한 물리 연산이나 렉 유발 행위는 자제 부탁드립니다.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>📜 서버 규칙</h2>
+            <h2>📜 서버 이용 규칙</h2>
+            <h3>[ 기본 매너 ]</h3>
             <ul>
-                <li>욕설은 가능하나 일베성 드립, 패드립은 금지합니다.</li>
-                <li>무분별한 프롭 소환 및 렉 유발은 하지 말아주세요.</li>
-                <li>다른 유저의 빌드를 허락 없이 건드리지 마세요.</li>
-                <li>신고 시스템 악용을 금지합니다. (무고/장난 신고 금지)</li>
-                <li class="highlight">엔티티에 있는 폭탄을 함부로 사용하지 마세요.</li>
+                <li>욕설 및 비하 발언은 금지합니다. (특히 일베/메갈 등 혐오 표현 및 패드립 즉시 차단)</li>
+                <li>다른 유저가 제작 중인 프롭이나 빌드 결과물을 허락 없이 훼손하지 마세요.</li>
+            </ul>
+            <h3>[ 금지 행위 ]</h3>
+            <ul>
+                <li>무분별한 프롭 스팸(Prop Spam) 및 엔티티 남용을 금지합니다.</li>
+                <li>신고 시스템(Report)을 장난이나 허위 사실로 악용할 경우 제재 대상이 됩니다.</li>
+                <li class="highlight">엔티티 탭의 '폭탄/폭발물' 카테고리는 서버 전체 렉을 유발하므로 사용 전 주의하세요.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>🤝 도움을 주신 분들</h2>
-            <ul>
-                <li><strong>GALOK</strong> - 창작마당 모음집</li>
-                <li><strong>다크브릭</strong> - 연동봇, 애드온, 서버 구축</li>
-                <li><strong>Jellen</strong> - 레그돌 스크립트</li>
-                <li><strong>klonox</strong> - ULX, 애드온</li>
-                <li><strong>DEAT</strong> - ULX, 애드온</li>
-            </ul>
+            <h2>💻 서버 호스트 사양</h2>
+            <table class="specs-table">
+                <tr><td>CPU</td><td>AMD Ryzen 7 5700X (8-Core)</td></tr>
+                <tr><td>GPU</td><td>NVIDIA GeForce RTX 3070</td></tr>
+                <tr><td>RAM</td><td>DDR4 16GB (3200MT/s)</td></tr>
+                <tr><td>Storage</td><td>NVMe M.2 SSD 512GB / SATA SSD 111GB</td></tr>
+                <tr><td>Location</td><td>Korea (Personal PC Server)</td></tr>
+            </table>
         </div>
 
-                <h2>서버 사양 및 장비</h2>
+        <div class="section">
+            <h2>🤝 제작 및 도움</h2>
             <ul>
-                <li>cpu: AMD Ryzen 7 5700X</li>
-                <li>그래픽: RTX 3070</li>
-                <li>Ram: DDR4 16GB 3200MT/s</li>
-                <li>저장장치: m.2 SSD 512GB, SATA SSD 111GB</li>
+                <li><strong>GALOK</strong> - 창작마당 모음집 관리 및 구성</li>
+                <li><strong>다크브릭</strong> - 디스코드 연동봇 구축, 애드온 커스텀, 서버 환경 설정</li>
+                <li><strong>Jellen</strong> - 서버 전용 레그돌 물리 스크립트 최적화</li>
+                <li><strong>klonox</strong> - ULX 권한 설정 및 핵심 애드온 유지보수</li>
+                <li><strong>DEAT</strong> - 시스템 관리 및 보안 애드온 설정</li>
             </ul>
         </div>
 
         <div class="section" style="text-align: center;">
-            <h2>🔗 주요 링크</h2>
-            <a href="https://steamcommunity.com" class="btn">창작마당 모음집</a>
+            <h2>🔗 커뮤니티 및 모음집</h2>
+            <p style="color: #666; margin-bottom: 20px;">서버 접속 전, 아래 버튼을 눌러 모든 애드온을 구독해 주세요.</p>
+            <div class="btn-group">
+                <a href="https://steamcommunity.com" class="btn">창작마당 모음집 구독하기</a>
+            </div>
         </div>
     </div>
 
     <div class="footer">
-        &copy; 2026 빅시티 자유공원. All Rights Reserved.
+        &copy; 2026 <strong>빅시티 자유공원</strong>. All Rights Reserved.<br>
+        <span style="font-size: 0.8em; margin-top: 5px; display: block;">Designed for Garry's Mod Sandbox Server</span>
     </div>
 </div>
 

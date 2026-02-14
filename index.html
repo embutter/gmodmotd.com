@@ -16,7 +16,7 @@
 
         .container {
             width: 90%; 
-            max-width: 800px; /* 요청하신 대로 조금 더 줄인 사이즈 */
+            max-width: 850px;
             background: #ffffff;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -24,50 +24,63 @@
             overflow: hidden;
         }
 
+        /* 🖼️ 배경 이미지가 들어가는 헤더 영역 */
         .header {
-            padding: 40px 30px;
+            position: relative;
+            padding: 80px 30px; /* 높이를 조금 더 키웠습니다 */
             text-align: center;
-            border-bottom: 2px solid #eee;
+            /* 아래 url 안에 이미지 주소를 넣으세요 */
+            background-image: url('https://www.dropbox.com/scl/fi/ldqc068mxciwzyvbd7qa4/20260209113408_1.jpg?rlkey=rapovleufh6guc2cpss0ib4mq&st=w6tnlzq9&dl=1');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; /* 배경이 있으므로 글자는 흰색으로 고정 */
         }
 
-        /* 추가된 이미지 스타일 */
-        .server-logo {
-            width: 100%; /* 컨테이너 너비에 맞춤 */
-            max-width: 400px; /* 로고가 너무 크면 여기서 조절 */
-            height: auto;
-            margin-bottom: 20px; /* 글자와의 간격 */
-            border-radius: 8px;
+        /* 글자를 잘 보이게 하기 위한 어두운 덮개 (Overlay) */
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* 0.4를 높이면 더 어두워집니다 */
+            z-index: 1;
+        }
+
+        /* 헤더 안의 텍스트들을 덮개 위로 올림 */
+        .header h1, .header p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
         }
 
         .header h1 {
-            margin: 0;
-            font-size: 2.8em;
-            color: #000;
+            font-size: 3.2em;
             font-weight: 800;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
         }
 
         .header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #666;
+            font-size: 1.4em;
+            margin-top: 15px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
         }
 
         .content {
-            padding: 30px;
+            padding: 40px;
         }
 
         .section h2 {
             color: #000;
-            border-left: 5px solid #4a90e2;
+            border-left: 6px solid #4a90e2;
             padding-left: 15px;
-            margin-bottom: 15px;
-            font-size: 1.7em;
+            margin-bottom: 20px;
+            font-size: 2em;
         }
 
         li {
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 1.15em;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.3em;
             color: #333;
         }
 
@@ -75,18 +88,20 @@
             display: inline-block;
             background: #000;
             color: #fff;
-            padding: 12px 30px;
+            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 10px;
         }
 
         .footer {
             background: #fafafa;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             color: #aaa;
-            font-size: 0.9em;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
@@ -94,8 +109,6 @@
 
 <div class="container">
     <div class="header">
-        <img src="https://www.dropbox.com/scl/fi/ldqc068mxciwzyvbd7qa4/20260209113408_1.jpg?rlkey=rapovleufh6guc2cpss0ib4mq&st=w6tnlzq9&dl=1" alt="서버 로고" class="server-logo">
-        
         <h1>빅시티 시민공원</h1>
         <p>쾌적한 환경을 위해 규칙을 준수해 주세요.</p>
     </div>
@@ -113,7 +126,7 @@
 
         <div class="section">
             <h2>🔗 주요 링크</h2>
-            <a href="https://steamcommunity.com" class="btn">창작마당 모음집</a>
+            <a href="https://steamcommunity.com" class="btn">창작마당 모음집 바로가기</a>
         </div>
     </div>
 
